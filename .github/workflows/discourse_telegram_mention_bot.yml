@@ -16,7 +16,9 @@ jobs:
         uses: actions/cache@v2
         with:
           path: last_post_id.txt
-          key: last_post_id
+          key: last_post_id-${{ github.run_id }}
+          restore-keys: |
+            last_post_id-
       - name: Run Discourse bot
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
