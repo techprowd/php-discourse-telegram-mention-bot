@@ -88,7 +88,7 @@ class DiscourseMentionBot
         $text = $post['raw'] ?? '';
 
         foreach ($this->keywords as $keyword) {
-            if (false !== strpos($text, $keyword)) {
+            if (false !== stripos($text, $keyword)) {
                 return true;
             }
         }
