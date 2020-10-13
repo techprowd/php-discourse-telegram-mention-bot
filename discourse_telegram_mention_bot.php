@@ -214,5 +214,5 @@ $keywords = [
     'fb320',
 ];
 
-$bot = new DiscourseMentionBot($discourseUrl, $telegramBotToken, $chatId, $keywords);
+$bot = new DiscourseMentionBot($discourseUrl, $telegramBotToken, $chatId, $keywords, 100);
 $bot->run();
