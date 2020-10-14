@@ -157,6 +157,8 @@ class DiscourseMentionBot
 
     private function filterText(string $text): string
     {
+        $text = preg_replace('/[^\x01-\x7F]/', '', $text);
+        
         return preg_replace('/([_*`\[])/', '\\\\$1', $text);
     }
 
